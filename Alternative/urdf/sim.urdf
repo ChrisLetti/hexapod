@@ -1,0 +1,485 @@
+<?xml version="1.0" ?>
+<robot name="sim_assembly" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.0029150291423598977 6.451213278016444e-05 0.08231668322927671" rpy="0 0 0"/>
+    <mass value="2.7603940572615615"/>
+    <inertia ixx="0.010426" iyy="0.011434" izz="0.020845" ixy="0.0" iyz="2e-06" ixz="8.2e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sim_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+</link>
+
+<link name="cox_L1_1">
+  <inertial>
+    <origin xyz="-0.02591620449566369 -0.02661901064445657 0.021624871839477283" rpy="0 0 0"/>
+    <mass value="0.43432685299491564"/>
+    <inertia ixx="0.000242" iyy="0.00024" izz="0.000124" ixy="-1.3e-05" iyz="1e-05" ixz="1.2e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.087783 0.066055 -0.0596" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sim_description/meshes/cox_L1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="red"/>
+  </visual>
+</link>
+
+<link name="femur_L1_1">
+  <inertial>
+    <origin xyz="-0.00630362878791349 -0.04165884915417355 0.02374727271288421" rpy="0 0 0"/>
+    <mass value="0.13198223137761092"/>
+    <inertia ixx="9.4e-05" iyy="9.2e-05" izz="0.000131" ixy="1.3e-05" iyz="2.4e-05" ixz="2.4e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.136785 0.078571 -0.0781" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sim_description/meshes/femur_L1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="green"/>
+  </visual>
+</link>
+
+<link name="tibia_L1_1">
+  <inertial>
+    <origin xyz="0.00443257717680598 -0.03266393553788731 -0.023970122942913882" rpy="0 0 0"/>
+    <mass value="0.49510094478354577"/>
+    <inertia ixx="0.000705" iyy="0.000714" izz="0.000267" ixy="-8.2e-05" iyz="-0.000196" ixz="-0.000204"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.183123 0.124909 -0.123986" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sim_description/meshes/tibia_L1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="blue"/>
+  </visual>
+  <collision>
+    <origin xyz="0.183123 0.124909 -0.123986" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sim_description/meshes/tibia_L1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="cox_L2_1">
+  <inertial>
+    <origin xyz="0.0004964743710710037 -0.03714794711024526 0.02162486116322518" rpy="0 0 0"/>
+    <mass value="0.4343273697036566"/>
+    <inertia ixx="0.000254" iyy="0.000228" izz="0.000124" ixy="1e-06" iyz="1.6e-05" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0002 0.0855 -0.0596" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sim_description/meshes/cox_L2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="red"/>
+  </visual>
+</link>
+
+<link name="femur_L2_1">
+  <inertial>
+    <origin xyz="0.024999932602743927 -0.03391433252166742 0.023747300674978628" rpy="0 0 0"/>
+    <mass value="0.13198203782549656"/>
+    <inertia ixx="8e-05" iyy="0.000106" izz="0.000131" ixy="1e-06" iyz="3.4e-05" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0256 0.129 -0.0781" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sim_description/meshes/femur_L2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="green"/>
+  </visual>
+</link>
+
+<link name="tibia_L2_1">
+  <inertial>
+    <origin xyz="0.026231231365709155 -0.019962156826335425 -0.023970158831343333" rpy="0 0 0"/>
+    <mass value="0.4951010829528958"/>
+    <inertia ixx="0.000791" iyy="0.000628" izz="0.000267" ixy="-5e-06" iyz="-0.000283" ixz="-6e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0256 0.194532 -0.123986" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sim_description/meshes/tibia_L2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="blue"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0256 0.194532 -0.123986" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sim_description/meshes/tibia_L2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="cox_L3_1">
+  <inertial>
+    <origin xyz="0.026618767010835084 -0.02591646586785573 0.021624856109849683" rpy="0 0 0"/>
+    <mass value="0.43432790820492373"/>
+    <inertia ixx="0.00024" iyy="0.000242" izz="0.000124" ixy="1.3e-05" iyz="1.2e-05" ixz="-1e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.088556 0.065282 -0.0596" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sim_description/meshes/cox_L3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="red"/>
+  </visual>
+</link>
+
+<link name="femur_L3_1">
+  <inertial>
+    <origin xyz="0.04165864139948111 -0.006303836542603886 0.02374727271288457" rpy="0 0 0"/>
+    <mass value="0.13198223137761053"/>
+    <inertia ixx="9.2e-05" iyy="9.4e-05" izz="0.000131" ixy="-1.3e-05" iyz="2.4e-05" ixz="-2.4e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.101072 0.114284 -0.0781" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sim_description/meshes/femur_L3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="green"/>
+  </visual>
+</link>
+
+<link name="tibia_L3_1">
+  <inertial>
+    <origin xyz="0.032663727891389854 0.0044333695522212335 -0.023970122918941086" rpy="0 0 0"/>
+    <mass value="0.4951009447835447"/>
+    <inertia ixx="0.000714" iyy="0.000705" izz="0.000267" ixy="8.2e-05" iyz="-0.000204" ixz="0.000196"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.14741 0.160623 -0.123986" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sim_description/meshes/tibia_L3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="blue"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.14741 0.160623 -0.123986" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sim_description/meshes/tibia_L3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="cox_R1_1">
+  <inertial>
+    <origin xyz="-0.025916257190701786 0.026618975128233482 0.02162487097241285" rpy="0 0 0"/>
+    <mass value="0.4343278965105797"/>
+    <inertia ixx="0.000242" iyy="0.00024" izz="0.000124" ixy="1.3e-05" iyz="-1e-05" ixz="1.2e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.087783 -0.066055 -0.0596" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sim_description/meshes/cox_R1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="red"/>
+  </visual>
+</link>
+
+<link name="femur_R1_1">
+  <inertial>
+    <origin xyz="-0.006303630531844739 0.04165884858233347 0.023747273769405303" rpy="0 0 0"/>
+    <mass value="0.13198221421387046"/>
+    <inertia ixx="9.4e-05" iyy="9.2e-05" izz="0.000131" ixy="-1.3e-05" iyz="-2.4e-05" ixz="2.4e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.136785 -0.078571 -0.0781" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sim_description/meshes/femur_R1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="green"/>
+  </visual>
+</link>
+
+<link name="tibia_R1_1">
+  <inertial>
+    <origin xyz="0.0044325718207138265 0.032663940554899004 -0.023970148077329723" rpy="0 0 0"/>
+    <mass value="0.4951011694911315"/>
+    <inertia ixx="0.000705" iyy="0.000714" izz="0.000267" ixy="8.2e-05" iyz="0.000196" ixz="-0.000204"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.183123 -0.124909 -0.123986" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sim_description/meshes/tibia_R1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="blue"/>
+  </visual>
+  <collision>
+    <origin xyz="0.183123 -0.124909 -0.123986" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sim_description/meshes/tibia_R1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="cox_R2_1">
+  <inertial>
+    <origin xyz="0.0004964743710715687 0.03714794711024519 0.021624867320856722" rpy="0 0 0"/>
+    <mass value="0.4343273697036439"/>
+    <inertia ixx="0.000254" iyy="0.000228" izz="0.000124" ixy="-1e-06" iyz="-1.6e-05" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0002 -0.0855 -0.0596" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sim_description/meshes/cox_R2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="red"/>
+  </visual>
+</link>
+
+<link name="femur_R2_1">
+  <inertial>
+    <origin xyz="0.02499993399466704 0.033914364710497136 0.02374731532721193" rpy="0 0 0"/>
+    <mass value="0.13198159441271942"/>
+    <inertia ixx="8e-05" iyy="0.000106" izz="0.000131" ixy="-1e-06" iyz="-3.4e-05" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0256 -0.129 -0.0781" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sim_description/meshes/femur_R2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="green"/>
+  </visual>
+</link>
+
+<link name="tibia_R2_1">
+  <inertial>
+    <origin xyz="0.026231231649431988 0.019962149894543285 -0.023970149401849272" rpy="0 0 0"/>
+    <mass value="0.495101048843146"/>
+    <inertia ixx="0.000791" iyy="0.000628" izz="0.000267" ixy="5e-06" iyz="0.000283" ixz="-6e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0256 -0.194532 -0.123986" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sim_description/meshes/tibia_R2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="blue"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0256 -0.194532 -0.123986" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sim_description/meshes/tibia_R2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="cox_R3_1">
+  <inertial>
+    <origin xyz="0.026618802847938647 0.02591641194758179 0.02162486172957641" rpy="0 0 0"/>
+    <mass value="0.4343268468117766"/>
+    <inertia ixx="0.00024" iyy="0.000242" izz="0.000124" ixy="-1.3e-05" iyz="-1.2e-05" ixz="-1e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.088556 -0.065282 -0.0596" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sim_description/meshes/cox_R3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="red"/>
+  </visual>
+</link>
+
+<link name="femur_R3_1">
+  <inertial>
+    <origin xyz="0.04165864082764131 0.0063038382865351905 0.02374727376940572" rpy="0 0 0"/>
+    <mass value="0.1319822142138699"/>
+    <inertia ixx="9.2e-05" iyy="9.4e-05" izz="0.000131" ixy="1.3e-05" iyz="-2.4e-05" ixz="-2.4e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.101072 -0.114284 -0.0781" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sim_description/meshes/femur_R3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="green"/>
+  </visual>
+</link>
+
+<link name="tibia_R3_1">
+  <inertial>
+    <origin xyz="0.03266373292993158 -0.0044333641957500225 -0.023970148077329848" rpy="0 0 0"/>
+    <mass value="0.4951011694911329"/>
+    <inertia ixx="0.000714" iyy="0.000705" izz="0.000267" ixy="-8.2e-05" iyz="0.000204" ixz="0.000196"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.14741 -0.160623 -0.123986" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sim_description/meshes/tibia_R3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="blue"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.14741 -0.160623 -0.123986" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://sim_description/meshes/tibia_R3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="R31" type="revolute">
+  <origin xyz="-0.087783 -0.066055 0.0596" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="cox_L1_1"/>
+  <axis xyz="0.0 -0.0 -1.0"/>
+  <limit upper="1" lower="-1" effort="100" velocity="100"/>
+</joint>
+
+<joint name="R32" type="revolute">
+  <origin xyz="-0.049002 -0.012516 0.0185" rpy="0 0 0"/>
+  <parent link="cox_L1_1"/>
+  <child link="femur_L1_1"/>
+  <axis xyz="-0.707107 0.707107 -0.0"/>
+  <limit upper="0.8" lower="-0.8" effort="100" velocity="100"/>
+</joint>
+
+<joint name="R33" type="revolute">
+  <origin xyz="-0.046338 -0.046338 0.045886" rpy="0 0 0"/>
+  <parent link="femur_L1_1"/>
+  <child link="tibia_L1_1"/>
+  <axis xyz="0.707107 -0.707107 0.0"/>
+  <limit upper="0.7" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="R21" type="revolute">
+  <origin xyz="0.0002 -0.0855 0.0596" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="cox_L2_1"/>
+  <axis xyz="0.0 -0.0 -1.0"/>
+  <limit upper="1" lower="-1" effort="100" velocity="100"/>
+</joint>
+
+<joint name="R22" type="revolute">
+  <origin xyz="-0.0258 -0.0435 0.0185" rpy="0 0 0"/>
+  <parent link="cox_L2_1"/>
+  <child link="femur_L2_1"/>
+  <axis xyz="-1.0 -0.0 -0.0"/>
+  <limit upper="0.8" lower="-0.8" effort="100" velocity="100"/>
+</joint>
+
+<joint name="R23" type="revolute">
+  <origin xyz="0.0 -0.065532 0.045886" rpy="0 0 0"/>
+  <parent link="femur_L2_1"/>
+  <child link="tibia_L2_1"/>
+  <axis xyz="1.0 -0.0 0.0"/>
+  <limit upper="0.7" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="R11" type="revolute">
+  <origin xyz="0.088556 -0.065282 0.0596" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="cox_L3_1"/>
+  <axis xyz="0.0 0.0 -1.0"/>
+  <limit upper="1" lower="-1" effort="100" velocity="100"/>
+</joint>
+
+<joint name="R12" type="revolute">
+  <origin xyz="0.012516 -0.049002 0.0185" rpy="0 0 0"/>
+  <parent link="cox_L3_1"/>
+  <child link="femur_L3_1"/>
+  <axis xyz="-0.707107 -0.707107 -0.0"/>
+  <limit upper="0.8" lower="-0.8" effort="100" velocity="100"/>
+</joint>
+
+<joint name="R13" type="revolute">
+  <origin xyz="0.046338 -0.046339 0.045886" rpy="0 0 0"/>
+  <parent link="femur_L3_1"/>
+  <child link="tibia_L3_1"/>
+  <axis xyz="0.707107 0.707107 0.0"/>
+  <limit upper="0.7" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="L31" type="revolute">
+  <origin xyz="-0.087783 0.066055 0.0596" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="cox_R1_1"/>
+  <axis xyz="-0.0 -0.0 -1.0"/>
+  <limit upper="1" lower="-1" effort="100" velocity="100"/>
+</joint>
+
+<joint name="L32" type="revolute">
+  <origin xyz="-0.049002 0.012516 0.0185" rpy="0 0 0"/>
+  <parent link="cox_R1_1"/>
+  <child link="femur_R1_1"/>
+  <axis xyz="0.707107 0.707107 0.0"/>
+  <limit upper="0.8" lower="-0.8" effort="100" velocity="100"/>
+</joint>
+
+<joint name="L33" type="revolute">
+  <origin xyz="-0.046338 0.046338 0.045886" rpy="0 0 0"/>
+  <parent link="femur_R1_1"/>
+  <child link="tibia_R1_1"/>
+  <axis xyz="-0.707107 -0.707107 -0.0"/>
+  <limit upper="0.7" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="L21" type="revolute">
+  <origin xyz="0.0002 0.0855 0.0596" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="cox_R2_1"/>
+  <axis xyz="-0.0 -0.0 -1.0"/>
+  <limit upper="1" lower="-1" effort="100" velocity="100"/>
+</joint>
+
+<joint name="L22" type="revolute">
+  <origin xyz="-0.0258 0.0435 0.0185" rpy="0 0 0"/>
+  <parent link="cox_R2_1"/>
+  <child link="femur_R2_1"/>
+  <axis xyz="1.0 -0.0 0.0"/>
+  <limit upper="0.8" lower="-0.8" effort="100" velocity="100"/>
+</joint>
+
+<joint name="L23" type="revolute">
+  <origin xyz="0.0 0.065532 0.045886" rpy="0 0 0"/>
+  <parent link="femur_R2_1"/>
+  <child link="tibia_R2_1"/>
+  <axis xyz="-1.0 -0.0 -0.0"/>
+  <limit upper="0.7" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="L11" type="revolute">
+  <origin xyz="0.088556 0.065282 0.0596" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="cox_R3_1"/>
+  <axis xyz="-0.0 0.0 -1.0"/>
+  <limit upper="1" lower="-1" effort="100" velocity="100"/>
+</joint>
+
+<joint name="L12" type="revolute">
+  <origin xyz="0.012516 0.049002 0.0185" rpy="0 0 0"/>
+  <parent link="cox_R3_1"/>
+  <child link="femur_R3_1"/>
+  <axis xyz="0.707107 -0.707107 0.0"/>
+  <limit upper="0.8" lower="-0.8" effort="100" velocity="100"/>
+</joint>
+
+<joint name="L13" type="revolute">
+  <origin xyz="0.046338 0.046339 0.045886" rpy="0 0 0"/>
+  <parent link="femur_R3_1"/>
+  <child link="tibia_R3_1"/>
+  <axis xyz="-0.707107 0.707107 -0.0"/>
+  <limit upper="0.7" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<material name="silver">
+  <color rgba="0.7 0.7 0.7 1.0"/>
+</material>
+
+<material name="blue">
+  <color rgba="0.7 0.7 0.7 1.0"/>
+</material>
+
+<material name="green">
+  <color rgba="0.7 0.7 0.7 1.0"/>
+</material>
+
+<material name="red">
+  <color rgba="0.7 0.7 0.7 1.0"/>
+</material>
+
+</robot>
